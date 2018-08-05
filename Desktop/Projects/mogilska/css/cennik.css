@@ -1,0 +1,177 @@
+body
+{
+	overflow-x:hidden;
+}
+
+.navbar-header
+{
+	background-color: #D4E8E1;
+}
+
+.logo
+{
+	text-align: center;
+	padding-left: 70px;
+}
+
+.topmenu
+{
+	padding-left: 100px;
+}
+
+.topmenu ul > li > a
+{
+	font-size: 20px;
+	color: #0A2E2E;
+}
+
+.contactwrap
+{
+	background-color: #0A2E2E;
+	color: white;
+}
+
+.telefon > p
+{
+	text-align: center;
+	padding-top: 15px;
+	padding-right: 130px;
+}
+
+.btn1
+{
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+    border: 2px solid #e7e7e7;
+    background-color: white;
+    color: black;
+    margin-top: 6px;
+    padding: 7px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.btn1:hover
+{
+    background: #e7e7e7;
+}
+
+#welcome
+{
+	text-align: center;
+}
+
+.top h5
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
+.collapsible
+{
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover
+{
+    background-color: #555;
+}
+
+.collapsible:after
+{
+    content: '\25BC';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after
+{
+    content: "\25B2";
+}
+
+.content
+{
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #fff;
+}
+
+.baner
+{
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.tabela
+{
+	padding-top: 15px;
+}
+
+.cena
+{
+	text-align: center;
+}
+
+
+
+
+#newsletter
+{
+	background-color: black;
+	color: white;
+	margin-top: 50px;
+}
+
+.zapisz
+{
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.zapisz p
+{
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.zapisz a
+{
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.mail
+{
+	display: inline-block;
+}
+
+#stopka
+{
+	background-color: grey;
+	color: black;
+}
+
+#stopka h1
+{
+	padding-top: 70px;
+	padding-bottom: 100px;
+	padding-left: 100px;
+}

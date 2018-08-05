@@ -1,0 +1,265 @@
+body
+{
+	overflow-x:hidden;
+	padding: 0;
+  margin: 0;
+}
+
+.navbar-header
+{
+	background-color: #D4E8E1;
+}
+
+.logo
+{
+	text-align: center;
+	padding-left: 70px;
+}
+
+.topmenu
+{
+	padding-left: 100px;
+}
+
+.topmenu ul > li > a
+{
+	font-size: 20px;
+	color: #0A2E2E;
+}
+
+.contactwrap
+{
+	background-color: #0A2E2E;
+	color: white;
+}
+
+.telefon > p
+{
+	text-align: center;
+	padding-top: 15px;
+	padding-right: 130px;
+}
+
+.btn1
+{
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+    border: 2px solid #e7e7e7;
+    background-color: white;
+    color: black;
+    margin-top: 6px;
+    padding: 7px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.btn1:hover
+{
+    background: #e7e7e7;
+}
+
+.welcomephotos
+{
+	text-align: center;
+	margin-top: -50px;
+}
+
+.whatsup
+{
+	background-color: #efefef;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.whatsup h1
+{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+
+.whatsup h3
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.whatsup p
+{
+	margin-bottom: 70px;
+}
+
+.about
+{
+	text-align: left;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+
+  /* karuzela lekarze */
+#lekarze
+{
+	background: #efefef;
+}
+
+.nasilekarze
+{
+	margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item,
+  .carousel-inner
+    .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+    + .carousel-item
+    + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner
+    .active.carousel-item
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: 0;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+ /* karuzela lekarze koniec*/
+
+
+.faq h1
+{
+ 	margin-top: 50px;
+ 	margin-bottom: 80px;
+ 	margin-left: 100px;
+}
+
+#akordeon-faq a
+{
+	color: black;
+}
+
+.dojazd h1
+{
+ 	margin-top: 80px;
+ 	margin-bottom: 50px;
+ 	margin-left: 100px;
+}
+
+.adress
+{
+	text-align: left;
+}
+
+
+#newsletter
+{
+	background-color: black;
+	color: white;
+	margin-top: 50px;
+}
+
+
+.zapisz
+{
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.zapisz p
+{
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.zapisz a
+{
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.mail
+{
+	display: inline-block;
+}
+
+
+#stopka
+{
+	background-color: grey;
+	color: black;
+	padding: 0;
+  margin-bottom: 0;
+}
+
+#stopka h1
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 100px;
+}
