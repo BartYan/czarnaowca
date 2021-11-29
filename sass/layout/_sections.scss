@@ -1,0 +1,503 @@
+.section {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.45rem;
+    text-align: justify;
+    text-justify: inter-word;
+    color: $color_dark;
+    margin: 5% auto 0;
+    max-width: 1750px;
+    overflow-x: none;
+    &__star {
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        z-index: -1;
+        @media only screen and (max-width: 1800px) {
+            right: 5%;
+        }
+        @media only screen and (max-width: 1024px) {
+            width: 20%;
+            right: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            top: 10%;
+        }
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    @media only screen and (max-width: 768px) {
+        width: 90%;
+    }
+
+    &__header {
+        width: 100%;
+        text-align: center;
+        font-family: 'FuturaPTHeavy';
+        padding: 5% 0;
+
+        &-head {
+            font-size: 4.3rem;
+            color: $color_dark;
+            @media only screen and (max-width: 768px) {
+                font-size: 3.3rem;
+             }
+        }
+
+        &-subHead {
+            font-size: 2.1rem;
+            color: $color_blue;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            @media only screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
+
+.about {
+    position: relative;
+    margin: 7% auto 0;
+    @media only screen and (max-width: 768px) {
+        margin: 15% auto 0;
+    }
+    @media only screen and (max-width: 450px) {
+        margin: 25% auto 0;
+    }
+
+    &__head {
+        text-align: center;
+        img {
+            @media only screen and (max-width: 768px) {
+                width: 80%;
+            }
+        }
+    }
+
+    &__subHead {
+        font-family: 'FuturaPTHeavy';
+        font-size: 3rem;
+        text-align: center;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            font-size: 2rem;
+        }
+    }
+
+    &__opening {
+        width: 50%;
+        padding: 2rem 0 1rem;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__txt {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 0 2rem;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__imgRight {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        z-index: -1;
+        @media only screen and (max-width: 768px) {
+            display: none;
+            // top: 20%;
+            // width: 33vw;
+        }
+        // @media only screen and (max-width: 450px) {
+        //     display: none;
+        // }
+    }
+
+    &__imgLeft {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        z-index: -1;
+        @media only screen and (max-width: 768px) {
+            top: auto;
+            bottom: 0;
+            width: 25vw;
+            left: -10%;
+        }
+        @media only screen and (max-width: 450px) {
+            display: none;
+        }
+    }
+}
+
+.blog {
+    position: relative;
+    display: block;
+    margin: 8% 0;
+
+    @media only screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    @media only screen and (min-width: 1500px) {
+        min-height: 550px;
+    }
+
+    @media only screen and (min-width: 1800px) {
+        min-height: 600px;
+        margin: 8% 0;
+    }
+
+    &__img {
+        position: absolute;
+        top: 20px;
+        width: 45%;
+        max-width: 600px;
+        @media only screen and (max-width: 1024px) {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        @media only screen and (max-width: 1024px) {
+            position: relative;
+        }
+    }
+
+    &__img-left {
+        right: 0;
+    }
+
+    &__window {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 4% 0;
+
+        &-border {
+            width: 90%;
+            border: 2.8px solid $color_blue;
+            z-index: -1;
+            @media only screen and (max-width: 1024px) {
+                width: 100%;
+                padding: 18% 0 5%;
+                margin: -15% auto 0;
+            }
+        }
+
+        &-content {
+            width: 53%;
+            padding: 1rem 2.5rem 2rem;
+            @media only screen and (max-width: 1024px) {
+                width: 100%;
+                padding: 0;
+                margin: 0 auto;
+            }
+        }
+
+        &-head {
+            font-family: 'FuturaPTHeavy';
+            font-size: 4.3rem;
+            text-align: center;
+            margin: 0 auto;
+            @media only screen and (max-width: 1024px) {
+               padding: 1rem 2rem;
+            }
+        }
+
+        &-subHead {
+            font-family: 'FuturaPTHeavy';
+            font-size: 1.8rem;
+            color: $color_red;
+            line-height: 30px;
+            padding: 4% 0;
+            @media only screen and (max-width: 1024px) {
+                padding: 1rem 2rem;
+            }
+        }
+        &-txt {
+            @media only screen and (max-width: 1024px) {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @media only screen and (max-width: 1024px) {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        @media only screen and (max-width: 1024px) {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+// carousel styles
+.wrapper-carousel {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+    @media only screen and (max-width: 1200px) {
+        width: 90%;
+        margin: 0 auto 20%;
+    }
+}
+
+.carousel {
+    width: 90%;
+    margin: 0 auto;
+}
+.carousel-padd {
+    padding: 0 5%;
+}
+
+.slick-slide {
+    margin: 10px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.wrapper .slick-dots li button:before {
+    font-size: 20px;
+    color: black;
+}
+
+.slick-prev:before {
+    content: '\25C0';
+    font-size: 2rem;
+    color: $color_blue;
+}
+
+.slick-next:before {
+    content: '\25B6';
+    font-size: 2rem;
+    color: $color_blue;
+}
+
+// Książki!
+.slick__books {
+    position: relative;
+    img {
+        @media only screen and (max-width: 1200px) {
+            width: 85%;
+        }
+    }
+    &-info--flexEnd {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        @media only screen and (max-width: 1200px) {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-info {
+        width: 62%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 7%;
+        @media only screen and (max-width: 1200px) {
+            width: 100%;
+            margin-right: 0%;
+        }
+
+        div {
+            min-height: 120px;
+        }
+
+        h5 {
+            font-family: 'FuturaPTBoldOblique';
+            font-size: 1.5rem;
+            line-height: 32px;
+        }
+
+        p {
+            font-family: 'FuturaPTBook';
+            font-size: 1.2rem;
+            line-height: 32px;
+            padding: 2% 0;
+        }
+
+        .button {
+            background-color: $color_dark;
+            -webkit-box-shadow: 10px 10px 0px 0px $color_blue;
+            -moz-box-shadow: 10px 10px 0px 0px $color_blue;
+            box-shadow: 10px 10px 0px 0px $color_blue;
+        }
+
+        .button:hover {
+            background-color: $color_dark;
+            -webkit-box-shadow: 10px 10px 0px 0px #dddd0a;
+            -moz-box-shadow: 10px 10px 0px 0px #dddd0a;
+            box-shadow: 10px 10px 0px 0px #dddd0a;
+            transition: all 0.1s ease-in-out;
+        }
+    }
+    .bestseller {
+        position: absolute;
+        display: block;
+        bottom: 10%;
+        left:25%;
+        z-index: -1;
+        width: 100px;
+        @media only screen and (max-width: 500px) {
+            width: 80px;
+            left:5%;
+            bottom: 15%;
+        }
+    }
+}
+
+.slick__author {
+    &-imgBox {
+        position: relative;
+        width: 300px;
+        height: 350px;
+        margin: 0 auto;
+        @media only screen and (max-width: 1200px) {
+            width: 300px;
+            height: 350px;
+        }
+        @media only screen and (max-width: 600px) {
+            width: 80%;
+            height: 250px;
+        }
+        img {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            -webkit-box-shadow: -30px 30px 0px 0px $color_dark;
+            -moz-box-shadow: -30px 30px 0px 0px $color_dark;
+            box-shadow: -30px 30px 0px 0px $color_dark;
+            @media only screen and (max-width: 1200px) {
+                width: 250px;
+                height: 250px;
+            }
+            @media only screen and (max-width: 600px) {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &-info {
+        h5 {
+            font-family: 'FuturaPTBold';
+            font-size: 1.5rem;
+            line-height: 32px;
+            text-align: center;
+            padding: 0 0 5%;
+        }
+
+        p {
+            font-family: 'FuturaPTBook';
+            font-size: 1.2rem;
+            line-height: 32px;
+            padding: 2% 0;
+            text-align: justify;
+            padding: 0 15%;
+            @media only screen and (max-width: 600px) {
+                padding: 0 5%;
+            }
+        }
+    }
+}
+
+.soon {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
+    &__left {
+        width: 50%;
+        @media only screen and (max-width: 1024px) {
+            width: 80%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            @media only screen and (max-width: 1024px) {
+               margin-left:-15%;
+            }
+        }
+    }
+
+    &__right {
+        width: 50%;
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+         }
+        &-head {
+            width: 300px;
+            font-family: 'FuturaPTBoldOblique';
+            font-size: 1.8rem;
+            line-height: 32px;
+            text-align: center;
+            @media only screen and (max-width: 1024px) {
+                width: 100%;
+            }
+        }
+        &-subHead {
+            width: 300px;
+            font-family: 'FuturaPTBook';
+            font-size: 1.5rem;
+            line-height: 32px;
+            text-align: center;
+            padding: 2% 0;
+            @media only screen and (max-width: 1024px) {
+                width: 100%;
+            }
+        }
+        &-txt {
+            font-family: 'FuturaPTBook';
+            font-size: 1.5rem;
+            line-height: 27px;}
+    }
+}

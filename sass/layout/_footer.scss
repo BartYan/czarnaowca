@@ -1,0 +1,201 @@
+.footer {
+    font-family: FuturaPTBook;
+    background-color: $color_dark;
+    font-size: 18px;
+    z-index: 11;
+    padding: 0 0 3rem;
+
+    @media (min-width: 768px) {
+        display: flex;
+        padding: 0 0 2rem
+    }
+
+    @media (min-width: 2200px) {
+        font-size: 15px;
+    }
+
+    @media (min-width: 2800px) {
+        font-size: 60px;
+    }
+
+    &__box {
+        margin: 0 0 0 1rem;
+        width: 100%;
+
+        @media (min-width: 1200px) {
+            margin: 0 0 0 7rem;
+            display: flex;
+            padding: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            margin: 0;
+        }
+    }
+
+    &__nav {
+        padding: 0 0 0 10px;
+
+        @media (min-width: 1200px) {
+            padding: 2rem;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $color_white;
+            cursor: pointer;
+
+            &--item {
+                color: $color_white;
+                padding: 0.6rem 0;
+                list-style-type: none;
+
+                h5 {
+                    font-family: FuturaPTHeavy;
+                }
+            }
+        }
+
+        &-link:hover {
+            li {
+                color: $color_blue;
+            }
+        }
+    }
+
+    &__nav-news {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    &__newsletter-inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: flex-end;
+        width: fit-content;
+    }
+
+    &__newsletter {
+        &-input {
+            font-family: FuturaPTBook;
+            font-size: 16px;
+            background: none;
+            border: 1.5px solid $color_white;
+            padding: 5px 10px;
+            width: 220px;
+            color: $color_white;
+        }
+
+        &-input::placeholder {
+            font-family: FuturaPTBook;
+            color: $color_white;
+            font-size: 16px;
+
+            @media (min-width: 2200px) {
+                font-size: 15px;
+            }
+        }
+
+        &-input:focus {
+            color: $color_blue;
+            border: 1.5px solid $color_blue;
+            border-radius: 0;
+            outline: none;
+        }
+        &-btn {
+            display: block;
+            font-family: FuturaPTHeavy;
+            font-size: 14px;
+            color: $color_white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: fit-content;
+        }
+        &-btn:hover {
+            color: $color_blue;
+            cursor: pointer;
+        }
+    }
+
+    // &_social {
+    //     display: flex;
+
+    //     &-item {
+    //         width: 12px;
+    //         padding: 0 30px 0 0;
+    //         @media (min-width: 2200px) {
+    //             width: 20px;
+    //         }
+    //     }
+    // }
+}
+
+/* The container checkbox */
+.footer__newsletter-checkBox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.footer__newsletter-checkBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.footer__newsletter-checkBox--span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.footer__newsletter-checkBox:hover input ~ .footer__newsletter-checkBox--span {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.footer__newsletter-checkBox input:checked ~ .footer__newsletter-checkBox--span {
+    background-color: $color_blue;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.footer__newsletter-checkBox--span:after {
+    content: "\2713";
+    position: absolute;
+    display: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $color_white;
+    margin-left: 0.2rem;
+    margin-top: -0.1rem;
+}
+
+/* Show the checkmark when checked */
+.footer__newsletter-checkBox input:checked ~ .footer__newsletter-checkBox--span:after {
+    display: block;
+}
+
+.footer__newsletter-checkBox--info{
+    position: absolute;
+    left: 1.5rem;
+    top: -0.25rem;
+    font-size: 10px;
+    color: $color_white;
+    width: 100%;
+}
