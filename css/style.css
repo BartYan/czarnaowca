@@ -1190,6 +1190,16 @@
     margin: 5% auto 15%;
   }
 }
+.single__top .wrapper-carousel {
+  width: 30%;
+  margin: 0;
+}
+@media only screen and (max-width: 1400px) {
+  .single__top .wrapper-carousel {
+    width: 50%;
+    margin: 5% 0;
+  }
+}
 .single__gallery {
   padding: 10px;
   border: 1px solid #231f20;
@@ -1426,19 +1436,6 @@ body {
   padding: 0;
 }
 
-@font-face {
-  font-family: obviously_wide_regular;
-  src: url("../fonts/font_obviously_wide_regular/Obviously-Wide.woff") format("woff"), url("../fonts/font_obviously_wide_regular/Obviously-Wide.woff2") format("woff");
-}
-@font-face {
-  font-family: obviously_wide_semibold;
-  src: url("../fonts/font_obviously_wide_semibold/Obviously Wide/Web/Obviously-Wide_Semibold.woff") format("woff"), url("../fonts/font_obviously_wide_semibold/Obviously Wide/Web/Obviously-Wide_Semibold.woff2") format("woff");
-}
-@font-face {
-  font-family: obviously_wide_bold;
-  src: url("../fonts/font_obviously_wide_bold/Obviously Wide/Web/Obviously-Wide_Bold.woff") format("woff"), url("../fonts/font_obviously_wide_bold/Obviously Wide/Web/Obviously-Wide_Bold.woff2") format("woff");
-  font-weight: bold;
-}
 @font-face {
   font-family: FuturaPTDemi;
   src: url("../fonts/FuturaPTDemi.woff") format("woff"), url("../fonts/FuturaPTDemi.woff") format("woff");

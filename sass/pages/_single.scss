@@ -51,6 +51,15 @@
                 margin: 5% auto 15%;
             }
         }
+
+        .wrapper-carousel {
+            width: 30%;
+            margin: 0;
+            @media only screen and (max-width: 1400px) {
+                width: 50%;
+                margin: 5% 0;
+            }
+        }
     }
     &__gallery {
         padding: 10px;
