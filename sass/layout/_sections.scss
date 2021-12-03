@@ -6,7 +6,7 @@
     text-align: justify;
     text-justify: inter-word;
     color: $color_dark;
-    margin: 5% auto 0;
+    margin: 8% auto 0;
     max-width: 1750px;
     overflow-x: none;
     &__star {
@@ -32,20 +32,21 @@
     margin: 0 auto;
     @media only screen and (max-width: 768px) {
         width: 90%;
+        margin: 20% auto 5%;
     }
 
     &__header {
         width: 100%;
         text-align: center;
         font-family: 'FuturaPTHeavy';
-        padding: 5% 0;
+        padding: 4% 0;
 
         &-head {
             font-size: 4.3rem;
             color: $color_dark;
             @media only screen and (max-width: 768px) {
                 font-size: 3.3rem;
-             }
+            }
         }
 
         &-subHead {
@@ -60,6 +61,59 @@
             }
             img {
                 width: 150px;
+            }
+        }
+    }
+}
+
+.social {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 768px) {
+        top: 50%;
+    }
+    @media (max-width: 400px) {
+        position: relative;
+        top: auto;
+        flex-direction: row;
+    }
+    &__link {
+        text-decoration: none;
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+}
+
+.welcome {
+    width: 80%;
+    margin: 10% auto 0;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin: 20% auto 0;
+    }
+    
+    &__head {
+        width: 100%;
+        font-family: 'FuturaPTHeavy';
+        font-size: 5.3rem;
+        text-align: center;
+        color: $color_blue;
+        margin: 0;
+        padding: 0;
+    }
+    &__box {
+        border: 2.8px solid $color_blue;
+        margin: -25px 0 0;
+        padding: 2rem 3rem;
+        &-txt {
+            font-family: 'FuturaPTHeavy';
+            font-size: 1.8rem;
+            text-align: justify;
+            color: $color_dark;
+            @media only screen and (max-width: 768px) {
+                font-size: 1.3rem;
             }
         }
     }
@@ -332,6 +386,7 @@
         justify-content: center;
         align-items: center;
         margin-right: 7%;
+        text-align: center;
         @media only screen and (max-width: 1200px) {
             width: 100%;
             margin-right: 0%;
@@ -381,6 +436,121 @@
             left:5%;
             bottom: 15%;
         }
+    }
+}
+
+.items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5%;
+    @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
+
+    &-info {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 7% 0 5%;
+        text-align: left;
+        @media only screen and (max-width: 1024px) {
+            width: 50%;
+            margin-right: 0%;
+        }
+        @media only screen and (max-width: 500px) {
+            width: 80%;
+            margin-right: 0%;
+        }
+
+        div {
+            min-height: 120px;
+        }
+
+        h5 {
+            font-family: 'FuturaPTBoldOblique';
+            font-size: 1.5rem;
+            line-height: 32px;
+        }
+
+        p {
+            font-family: 'FuturaPTBook';
+            font-size: 1.2rem;
+            line-height: 32px;
+            padding: 2% 0;
+            text-align: justify;
+        }
+
+        .button {
+            margin-top: 1rem;
+            background-color: $color_dark;
+            -webkit-box-shadow: 10px 10px 0px 0px $color_blue;
+            -moz-box-shadow: 10px 10px 0px 0px $color_blue;
+            box-shadow: 10px 10px 0px 0px $color_blue;
+        }
+
+        .button:hover {
+            background-color: $color_dark;
+            -webkit-box-shadow: 10px 10px 0px 0px #dddd0a;
+            -moz-box-shadow: 10px 10px 0px 0px #dddd0a;
+            box-shadow: 10px 10px 0px 0px #dddd0a;
+            transition: all 0.1s ease-in-out;
+        }
+    }
+    .bestseller {
+        position: absolute;
+        display: block;
+        top: 10%;
+        left:8%;
+        z-index: 10;
+        width: 100px;
+        @media only screen and (max-width: 500px) {
+            width: 80px;
+            left:5%;
+            bottom: 15%;
+        }
+    }
+    &__books {
+        width: 40%;
+        @media only screen and (max-width: 1024px) {
+            width: 70%;
+            margin: 0 0 0 -2rem;
+        }
+    }
+    &__author {
+        width:40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @media only screen and (max-width: 1024px) {
+            width: 70%;
+            margin: 0 0 0 -2rem;
+        }
+        @media only screen and (max-width: 650px) {
+            width: 100%;
+            justify-content: center;
+        }
+        img {
+            width:350px;
+            height:350px;
+            display: block;
+            border-radius: 50%;
+            -webkit-box-shadow: -30px 30px 0px 0px $color_dark;
+            -moz-box-shadow: -30px 30px 0px 0px $color_dark;
+            box-shadow: -30px 30px 0px 0px $color_dark;
+            @media only screen and (max-width: 768px) {
+                width:250px;
+                height:250px;
+                margin: 0 0 0 -2rem;
+            }
+            @media only screen and (max-width: 650px) {
+                width:180px;
+                height:180px;
+                margin: 2rem 0 3rem 4rem;
+            }
+        }
+        
     }
 }
 
@@ -436,7 +606,7 @@
             font-size: 1.2rem;
             line-height: 32px;
             padding: 2% 0;
-            text-align: justify;
+            text-align: center;
             padding: 0 15%;
             @media only screen and (max-width: 600px) {
                 padding: 0 5%;
@@ -453,6 +623,11 @@
     align-items: center;
     @media only screen and (max-width: 1024px) {
         flex-direction: column;
+        margin: 10% auto;
+    }
+
+    &__content {
+        margin: 10% 0;
     }
     &__left {
         width: 50%;
@@ -501,3 +676,4 @@
             line-height: 27px;}
     }
 }
+
