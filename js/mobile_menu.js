@@ -1,3 +1,4 @@
+
 //hamburger and overlay variables
 let hamburger = document.querySelector('.nav_hamburger');
 let mobileMenu = document.getElementById("mobileMenu");
@@ -25,3 +26,16 @@ overlayLink.forEach(item => {
 });
 
 hamburger.addEventListener("click", overlay);
+
+//hamburger animation 
+const menuBtn = document.querySelector('.mobile_btn');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+});

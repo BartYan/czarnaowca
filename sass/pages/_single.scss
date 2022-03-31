@@ -2,7 +2,25 @@
 // single
 .single {
     width: 75%;
-    // padding-top: 7%;
+    
+    .blog__window-subHead {
+        text-align: center;
+    }
+
+    h1, h2, h3, h4, h5 {
+        margin: 1rem 0;
+        @media only screen and (max-width: 1024px) {
+            margin: 5% 0;
+        }
+    }
+
+    p {
+        margin: 2rem 0;
+        @media only screen and (max-width: 1024px) {
+            margin: 2rem 0;
+        }
+    }
+
     &__back {
         position: absolute;
         top: 15%;
@@ -15,10 +33,10 @@
         font-size: 1.8rem;
         color: $color_dark;
         @media only screen and (max-width: 1024px) {
-            top: 10%;
+            top: 6rem;
         }
         @media only screen and (max-width: 600px) {
-            top: 15%;
+            top: 5rem;
         }
     }
     &__back::before {
@@ -33,16 +51,19 @@
         align-items: flex-start;
         flex-direction: row;
         margin-bottom: 5%;
-        padding: 7% 0 0;
+        padding: 4% 0 0;
+        @media only screen and (max-width: 1400px) {
+            margin: 5% auto;
+        }
         @media only screen and (max-width: 1024px) {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 20% auto 10%;
-            padding: 15% 0 0;
+            margin: 0 auto 5%;
+            padding:  0;
         }
         @media only screen and (max-width: 600px) {
-            padding: 30% 0 0;
+            padding: 0;
         }
 
         ul {
@@ -57,7 +78,9 @@
             margin: 0;
             @media only screen and (max-width: 1400px) {
                 width: 50%;
-                margin: 5% 0;
+            }
+            @media only screen and (max-width: 768px) {
+                width: 100%;
             }
         }
     }
@@ -88,14 +111,15 @@
 
         h5 {
             font-family: 'FuturaPTBoldOblique';
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             line-height: 32px;
         }
 
         p {
             font-family: 'FuturaPTBook';
-            padding: 2% 0 10%;
-            text-align: justify;
+            padding: 0 0 10%;
+            text-align: left;
+            font-size: 18px;
         }
 
         .button {
@@ -104,6 +128,7 @@
             -moz-box-shadow: 10px 10px 0px 0px $color_blue;
             box-shadow: 10px 10px 0px 0px $color_blue;
             margin: 0 auto;
+            padding: 10px 20px;
         }
 
         .button:hover {
@@ -112,50 +137,91 @@
             -moz-box-shadow: 10px 10px 0px 0px $color_blue;
             box-shadow: 10px 10px 0px 0px $color_blue;
             margin: 0 auto;
+            padding: 10px 20px;
+        }
+    }
+    .items__stars {
+        position: relative;
+        margin: 0 1rem 0 0;
+        display: flex;
+        margin: -20px 0 0 0;
+        .bestseller {
+            display: block;
+            z-index: 10;
+            width: 100px;
+            margin: 0 0 1rem;
+            @media only screen and (max-width: 500px) {
+                width: 80px;
+            }
+        }
+        .new {
+            display: block;
+            z-index: 10;
+            width: 100px;
+            margin: -18px 0 0 10px;
+            @media only screen and (max-width: 500px) {
+                width: 80px;
+            }
         }
     }
 
     &__buy {
         position: absolute;
-        top: 0;
-        right: -15%;
+        top: 5%;
+        right: -10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @media only screen and (max-width: 1400px) {
             position: relative;
             right: auto;
-            margin: 5% 0;
+            top: auto;
+            margin: 0;
         }
         
         &-button { 
-            text-align: center;           
+            text-align: center;
+            .button:hover {
+                padding: 10px 20px;
+                background-color: $color_dark;
+                -webkit-box-shadow: 10px 10px 0px 0px #dddd0a;
+                -moz-box-shadow: 10px 10px 0px 0px #dddd0a;
+                box-shadow: 10px 10px 0px 0px #dddd0a;          
+            }       
         }
+        
         &-box {
             width: 400px;
-            height: 250px;
-            border: 2.8px solid $color_blue;
-            margin: 10px 0 0;
+            height: fit-content;
+            margin: 0;
+            @media only screen and (max-width: 1400px) {
+                width: 80%;
+            }
             @media only screen and (max-width: 1024px) {
                 width: 100%;
                 height: fit-content;
             }
         }
     }
-    .bestseller {
-        position: absolute;
-        display: block;
-        bottom: 5%;
-        right: 0;
-        z-index: 10;
-        width: 100px;
-        @media only screen and (max-width: 500px) {
-            width: 80px;
-            left:0%;
-            bottom: 5%;
+    .buybox-widget {
+        border: 2.8px solid $color_blue;
+        background-color: #fff;
+    }
+    &__content-padd {
+        @media only screen and (min-width: 1401px) {
+            padding: 0 350px 0 0;
         }
     }
     &__content {
         margin: 5% 0;
+        
         &-box {
             margin: 2% 0 4%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
         &-title {
             font-family: FuturaPTHeavy;
@@ -190,5 +256,52 @@
             width: 100%;
             height: auto;
         }
+    }
+
+    // .carousel-nav {
+    //     cursor: grab;
+    //     cursor: -moz-grab;
+    //     cursor: -webkit-grab;
+    // }
+    // .carousel-nav:active {
+    //     cursor: grabbing;
+    //     cursor: -moz-grabbing;
+    //     cursor: -webkit-grabbing;
+    // }
+    // .slick-lightbox-slick-item-inner{
+    //     cursor: grab;
+    //     cursor: -moz-grab;
+    //     cursor: -webkit-grab;
+    // }
+    // .slick-lightbox-slick-item-inner:active {
+    //     cursor: grabbing;
+    //     cursor: -moz-grabbing;
+    //     cursor: -webkit-grabbing;
+    // }
+    .carousel .slick-current {
+        cursor: pointer;
+        cursor: -moz-pointer;
+        cursor: -webkit-pointer;
+    }
+    .carousel .slick-current:active {
+        cursor: pointer;
+        cursor: -moz-pointer;
+        cursor: -webkit-pointer;
+    }
+    
+}
+.single-blog {
+    width: 60%;
+    margin: 0 auto;
+    @media only screen and (max-width: 1024px) {
+        width: 95%;
+    }
+}
+
+
+.single__authors {
+    margin-top: 200px;
+    @media only screen and (max-width: 1024px) {
+        margin-top: 20%;
     }
 }

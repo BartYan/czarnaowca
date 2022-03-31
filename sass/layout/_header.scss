@@ -6,11 +6,21 @@
 	display: flex;
 	justify-content: space-between;
 	-webkit-justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
 	z-index: 99;
 	background-color: $color_dark;
 	font-family: 'FuturaPTDemi';
+	&_logo {
+		position: relative;
+		width: 105px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 0 0 2rem;
+	}
 
-	&__list {
+	&_desktop-list {
 		display: none;
 
 		@media (min-width: 1200px) {
@@ -19,103 +29,32 @@
 			align-items: center;
 		}
 
-		&-item {
-			width: fit-content;
+		.menu {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 0 5%;
-
-			&--link {
-				text-decoration: none;
-				border: none;
-				color: $color_white;
-				font-size: 1rem;
-			}
-
-			&--link:hover {
-				color: $color_blue;
-			}
+			flex-direction: row;
+			list-style-type: none;
+			flex-wrap: wrap;
+			padding: 0 1rem 0 0;
 		}
-		&-item--search {
-			padding: 0 12% 0 8%;
-			.nav__list-search {
-				width: 20px;
-				height: auto;
-				display: block;
-			}
+		.menu-item a {
+			text-decoration: none;
+			border: none;
+			color: $color_white;
+			font-size: 1rem;
+			padding: 0 1rem;
+		}
+		.menu-item :hover {
+			color: $color_blue;
 		}
 	}
 
-	&_logo {
-		position: relative;
-		width: fit-content;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0 0 0 1rem;
-		@media (min-width: 1200px) {
-			width: 105px;
-			margin: 0;
-		}
-	}
-
-	/*mobile hamburger & overlay menu*/
-	&_hamburger {
-		display: block;
-		margin: 0 0.5rem 0 0;
-		// width: 40px;
-		cursor: pointer;
-		z-index: 10;
-		background: transparent;
-		border: none;
-
-		@media (min-width: 1200px) {
-			display: none;
-		}
-	}
-	
-	.line {
-		fill: none;
-		stroke: $color_white;
-		stroke-width: 6;
-		transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-		  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-	  }
-	  .line1 {
-		stroke-dasharray: 60 207;
-		stroke-width: 6;
-	  }
-	  .line2 {
-		stroke-dasharray: 60 60;
-		stroke-width: 6;
-	  }
-	  .line3 {
-		stroke-dasharray: 60 207;
-		stroke-width: 6;
-	  }
-	  .opened .line1 {
-		stroke-dasharray: 90 207;
-		stroke-dashoffset: -134;
-		stroke-width: 6;
-	  }
-	  .opened .line2 {
-		stroke-dasharray: 1 60;
-		stroke-dashoffset: -30;
-		stroke-width: 6;
-	  }
-	  .opened .line3 {
-		stroke-dasharray: 90 207;
-		stroke-dashoffset: -134;
-		stroke-width: 6;
-	  }
-
+	/*overlay menu*/
 	&_overlay {
 		display: none;
 		height: 100%;
 		width: 100%;
 		position: fixed;
-		z-index: 9;
+		z-index: 5;
 		left: 0;
 		top: 0;
 		background-color: $color_blue;
@@ -130,7 +69,7 @@
 		animation: fadeIn 0.5s;
 		/* IE 10+, Fx 29+ */
 
-
+		.menu li.current-menu-item a { color: $color_red; }
 		&-content {
 			position: absolute;
 			left: 50%;
@@ -146,31 +85,41 @@
 			transform: translate(-50%, -50%);
 			text-align: left;
 
-			&--link {
-				padding: 8px;
+			.menu {
+				display: flex;
+				flex-direction: column;
+				list-style-type: none;
+			}
+			.menu-item a {
 				text-decoration: none;
-				font-size: 25px;
+				border: none;
 				color: $color_white;
+				font-size: 2rem;
+				padding: 1rem 0;
 				display: block;
-				transition: 0.3s;
-
-				@media (min-width: 768px) {
-					font-size: 50px;
+				@media only screen and (max-width: 767px) {
+					font-size: 1rem;
+					padding: 0.5rem 0;
 				}
-
-				@media (min-width: 1024px) {
-					font-size: 60px;
+				@media only screen and (max-width: 450px) {
+					font-size: 1.5rem;
+					padding: 1rem 0;
 				}
 			}
+			.menu-item :hover {
+				color: $color_red;
+			}
+			
 		}
 	}
 }
 
 .nav_overlay a:hover,
 .overlay a:focus {
-	color: #f1f1f1;
+	color: #fff;
 }
 
 .active-menu {
 	color: $color_blue;
 }
+.menu li.current-menu-item a { color: $color_blue; }

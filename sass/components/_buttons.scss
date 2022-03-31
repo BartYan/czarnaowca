@@ -20,6 +20,10 @@
     box-shadow: 10px 10px 0px 0px $color_dark;
 }
 
+.button-small {
+    font-size: 1rem;
+}
+
 .blog__button-right {
     margin-right: 20%;
     @media only screen and (max-width: 1024px) {
@@ -31,4 +35,26 @@
     @media only screen and (max-width: 1024px) {
         margin-left: 0;
     }
+}
+
+.topBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    opacity: 0;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: $color_blue;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 95;
+    @media only screen and (max-width: 1024px) {
+        bottom: 3rem;
+        right: 1rem;
+    }
+}
+
+.topBtn-red {
+    color: $color_red;
 }
